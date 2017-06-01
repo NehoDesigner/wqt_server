@@ -8,6 +8,5 @@ function setToken($value){
         'psw' => $value ->user_psw,
     );
     $jwt = JWT::encode($token, $key);
-    $decoded = JWT::decode($jwt, $key, array('HS256'));
     return $jwt;
 }
